@@ -1,0 +1,96 @@
+<html ng-app="unitConverter">
+	<head>
+		<title>
+		Unit Converter
+		</title>
+	</head>
+	<body>
+		<h1>Unit Converter</h1>
+		<div ng-controller = "unitConverterController as ucc">
+		    <h2>Volume</h2>
+			<h3>Metric to Imperial</h3>
+			<input type="text" id="Length_Value" name="VALUE" ng-model="ucc.lengthValue">
+			<select ng-model="ucc.selected_metric_volume_unit" 
+                    ng-options="unit.unit_name for unit in ucc.metric_volume_units" 
+                    ng-change="ucc.showSelectedunitMetric()"></select>
+            <select ng-model="ucc.selected_imperial_volume_unit" 
+                    ng-options="unit.unit_name for unit in ucc.imperial_volume_units" 
+                    ng-change="ucc.showSelectedunitImperial()"></select>
+            <button ng-click="ucc.runApplication()">Convert</button>
+			<div>
+			<p>Convert To: <span ng-bind="ucc.answer"></span> <span ng-bind="ucc.selected_imperial_volume_unit.unit_name"></span>
+			</p>
+			</div>
+			<h3>Imperial to Metric</h3>
+			<input type="text" id="Length_Value" name="VALUE" ng-model="ucc.IlengthValue">
+            <select ng-model="ucc.Iselected_imperial_volume_unit" 
+                    ng-options="unit.unit_name for unit in ucc.Iimperial_volume_units" 
+                    ng-change="ucc.IshowSelectedunitImperial()"></select>
+			<select ng-model="ucc.Iselected_metric_volume_unit" 
+                    ng-options="unit.unit_name for unit in ucc.Imetric_volume_units" 
+                    ng-change="ucc.IshowSelectedunitMetric()"></select>
+            <button ng-click="ucc.IrunApplication()">Convert</button>
+			<div>
+			<p>Convert To: <span ng-bind="ucc.Ianswer"></span> <span ng-bind="ucc.Iselected_metric_volume_unit.unit_name"></span>
+			</p>
+			</div>
+			<hr>
+			<h2>Length</h2>
+				<h3>Metric to Imperial</h3>
+			<input type="text" id="Length_Value" name="VALUE" ng-model="ucc.lengthValue1">
+			<select ng-model="ucc.selected_metric_length_unit" 
+                    ng-options="unit.unit_name for unit in ucc.metric_length_units" 
+                    ng-change="ucc.showSelectedunitMetric()"></select>
+            <select ng-model="ucc.selected_imperial_length_unit" 
+                    ng-options="unit.unit_name for unit in ucc.imperial_length_units" 
+                    ng-change="ucc.showSelectedunitImperial()"></select>
+            <button ng-click="ucc.runApplicationLength()">Convert</button>
+			<div>
+			<p>Convert To: <span ng-bind="ucc.answer1"></span> <span ng-bind="ucc.selected_imperial_length_unit.unit_name"></span>
+			</p>
+			</div>
+			<h3>Imperial to Metric</h3>
+			<input type="text" id="Length_Value" name="VALUE" ng-model="ucc.IlengthValue1">
+            <select ng-model="ucc.Iselected_imperial_length_unit" 
+                    ng-options="unit.unit_name for unit in ucc.Iimperial_length_units" 
+                    ng-change="ucc.IshowSelectedunitImperial()"></select>
+            <select ng-model="ucc.Iselected_metric_length_unit" 
+                    ng-options="unit.unit_name for unit in ucc.Imetric_length_units" 
+                    ng-change="ucc.IshowSelectedunitMetric()"></select>
+            <button ng-click="ucc.IrunApplicationLength()">Convert</button>
+			<div>
+			<p>Convert To: <span ng-bind="ucc.Ianswer1"></span> <span ng-bind="ucc.Iselected_metric_length_unit.unit_name"></span>
+			</p>
+			</div>
+			<hr>
+			<h2>Mass</h2>
+				<h3>Metric to Imperial</h3>
+			<input type="text" id="Length_Value" name="VALUE" ng-model="ucc.lengthValue2">
+			<select ng-model="ucc.selected_metric_mass_unit" 
+                    ng-options="unit.unit_name for unit in ucc.metric_mass_units" 
+                    ng-change="ucc.showSelectedunitMetric()"></select>
+            <select ng-model="ucc.selected_imperial_mass_unit" 
+                    ng-options="unit.unit_name for unit in ucc.imperial_mass_units" 
+                    ng-change="ucc.showSelectedunitImperial()"></select>
+            <button ng-click="ucc.runApplicationMass()">Convert</button>
+			<div>
+			<p>Convert To: <span ng-bind="ucc.answer2"></span> <span ng-bind="ucc.selected_imperial_mass_unit.unit_name"></span>
+			</p>
+			</div>
+			<h3>Imperial to Metric</h3>
+			<input type="text" id="Length_Value" name="VALUE" ng-model="ucc.IlengthValue2">
+            <select ng-model="ucc.Iselected_imperial_mass_unit" 
+                    ng-options="unit.unit_name for unit in ucc.Iimperial_mass_units" 
+                    ng-change="ucc.IshowSelectedunitImperial()"></select>
+            <select ng-model="ucc.Iselected_metric_mass_unit" 
+                    ng-options="unit.unit_name for unit in ucc.Imetric_mass_units" 
+                    ng-change="ucc.IshowSelectedunitMetric()"></select>
+            <button ng-click="ucc.IrunApplicationMass()">Convert</button>
+			<div>
+			<p>Convert To: <span ng-bind="ucc.Ianswer2"></span> <span ng-bind="ucc.Iselected_metric_mass_unit.unit_name"></span>
+			</p>
+			</div>
+		<script src="angular.min.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
